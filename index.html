@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Trivia</title>
+    <!--- Michael Weitman --->
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./assets/javascript/app.js"></script>
+
+</head>
+
+<body>
+    <div class="jumbotron">
+        <h1>Movie Trivia - Free popcorn</h1>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class=col-md-10>
+                <div class="card">
+                    <div class="card-body mh-100">
+                        <h5 class="card-title">Game Instructions</h5>
+                        <h6 class="card-subtitle text-muted">Play for milk duds or a free popcorn refill</h6>
+                        <hr>This trivia game is powered by OMDB and chooses a random set of Trivia questions based on
+                        the
+                        selected theme.<ul style="list-style-type: circle">
+                            <li>You will have 60 seconds (or ~6 seconds per question at the start of the
+                                game) to answer 10 questions.</li>
+                            <li>If in your mind, "cats rule and dogs drool", try your luck on the 'Cats vs. Dogs' theme
+                                where
+                                you will be stuck with trivia questions pertaining to one or another.</li>
+                            <li>Are you are a millenial? Try your hand at the 'Cowboy' theme, pardner. If you are an
+                                AARP
+                                member, try your luck at Pokemon movies!</li>
+                        </ul>
+                        <p>Click a category to begin. The countdown timer will start immediately following content load...
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <button class="catbtns btn btn-primary btn-block" id="btn-0" onclick="playGame('space',50,0)">Space</button>
+                <button class="catbtns btn btn-primary btn-block" id="btn-1" onclick="playGame('cat',50,1)">Cats vs. Dogs</button>
+                <button class="catbtns btn btn-primary btn-block" id="btn-2" onclick="playGame('pokemon',17,2)">Pokemon</button>
+                <button class="catbtns btn btn-primary btn-block" id="btn-3" onclick="playGame('cowboy',50,3)">Cowboy</button>
+                <div class="card mt-4">
+                    <h5 class="card-header">timer:</h5>
+                    <div class="card-body text-center" id="timerColor">
+                        <h5 id="hTimer">01:00</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="questPanel">
+            <div class="col-md-12">
+                <div class="card mt-4">
+                    <div class="card-header">
+                        <div id="hQuestion"></div>
+                        <hr class="hrColor">
+                        <div class="card-body text-center">
+                            <h5 id="choice0"></h5>
+                            <h5 id="choice1"></h5>
+                            <h5 id="choice2"></h5>
+                            <h5 id="choice3"></h5>
+                        </div>
+                        <hr class="hrColor">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="msgPanel">
+            <div class="col-md-10">
+                <div class="card mt-4">
+                    <div class="card-header">
+                        <hr class="hrColor">
+                        <div id="hMessage"></div>
+                        <hr class="hrColor">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="card mt-4">
+                    <div class="card-header">
+                        <hr class="hrColor">
+                        <div class="d-flex justify-content-center" id="hCorrect"></div>
+                        <hr class="hrColor">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="progPanel">
+            <div class="col-md-12 d-flex justify-content-center">
+                <br>
+                <br>
+                <img src="./assets/images/Loading_icon.gif" height="200" width="300"></img>
+            </div>
+        </div>
+</body>
+
+</html>
